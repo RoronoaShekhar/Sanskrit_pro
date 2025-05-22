@@ -1,9 +1,14 @@
+
 window.addEventListener('DOMContentLoaded', () => {
   const fadeEls = document.querySelectorAll('.fade-in');
   fadeEls.forEach((el, index) => {
+    el.classList.remove('fade-in'); // Reset if already there
+    void el.offsetWidth; // Trigger reflow
+    el.classList.add('fade-in');
     el.style.animationDelay = `${0.1 + index * 0.1}s`;
   });
 });
+
 
 function triggerAnimation() {
   const elements = document.querySelectorAll('.fade-in');
