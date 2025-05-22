@@ -146,3 +146,7 @@ html, body {
     font-size: 0.9rem;
   }
 }
+.no-animation {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
